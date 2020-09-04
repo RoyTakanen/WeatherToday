@@ -29,3 +29,7 @@ npm start
 ```
 
 Sen pitäsi näkyä osoitteessa http://localhost:4040
+
+## TODO
+
+- Tuki reverse proxyille

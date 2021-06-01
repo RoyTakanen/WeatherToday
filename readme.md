@@ -1,19 +1,29 @@
-# Sää tänään
+# Weather Today
 
-Harrastusprojektina kehitetty sääsovellus.
+Weather site created as a hobby project
 
 ## Demo
 
-[sää.kaikkitietokoneista.net](https://sää.kaikkitietokoneista.net)
+[weather.kaikkitietokoneista.net](https://weather.kaikkitietokoneista.net)
 
-## Asennus ja käynnistäminen
+## Installation and starting
 
-Ensiksi aja komento
+### Production
+
+There is a docker image available on Docker hub which you can use. Example:
+
+```bash
+docker run -e APIKEY=somethingsecret -dp 8008:4040 --name="weather" kaikkitietokoneista/weather-today 
+```
+
+### Development
+
+Firstly run command
 ```bash
 npm install
 ```
 
-Seuraavaksi voit luoda _.env_-tiedoston, johon voi konfiguroida portin ja API-avaimen. Esimerkki:
+After that you can create _.env_ file, where you can configure port (optional: by default program will appear on port `4040`) and API-key (required: get from openweathermap). Example: 
 
 ```env
 
@@ -22,14 +32,10 @@ PORT=4040
 
 ```
 
-Nyt voit käynnistää ohjelman komennolla
+Now you can start the program
 
 ```
 npm start
 ```
 
-Sen pitäsi näkyä osoitteessa http://localhost:4040
-
-## TODO
-
-- Tuki reverse proxyille
+Now it should be available at [http://localhost:4040](http://localhost:4040)

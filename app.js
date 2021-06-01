@@ -20,9 +20,10 @@ app.set('view engine', 'ejs')
 app.use(express.static(__dirname + '/views/static'))
 
 app.get('/', function(req, res) {
-    let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress
+    //Say something about this on README
+    let ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress
     let kaupunki = req.query.kaupunki
-    let ipkaupunki = geoip.lookup(ip).city
+    let ipkaupunki = geoip.lookup(ip).city;
 
     if (kaupunki) {
         weather.setCity(kaupunki)

@@ -6,6 +6,6 @@ COPY . .
 
 RUN npm install
 
-EXPOSE 4040
+EXPOSE 80
 
 CMD ["node", "."]

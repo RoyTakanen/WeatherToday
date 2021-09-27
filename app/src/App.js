@@ -1,8 +1,14 @@
+import Days from './Days.js';
+
 function App() {
   return (
-    <div className="App" class="p-6 items-center justify-center">
-        <h1 class="text-blue-400 font-extrabold">Hello World!</h1>
-        <p class="tracking-widest">This is my first React App.</p>
+    <div className="App" class="mt-8 mx-32">
+        <center>
+          <h1 class="text-blue-400 text-6xl">WeatherToday!</h1>
+          <br></br>
+        </center>
+        <hr></hr>
+        <Days />
     </div>
   );
 }
